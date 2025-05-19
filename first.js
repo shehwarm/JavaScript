@@ -1,10 +1,7 @@
-function outer() {
-    let message = "hello";
+document.title = "website";
+document.body.style.backgroundColor = "black";
+console.dir(document); 
 
-    function inner() {  
-        console.log(message);
-    }   
-   inner();
-}
-outer();
-
+const username = " Shehwar ";
+const welcomeMsg = document.getElementById("welcome-msg");
+welcomeMsg.textContent += username === "" ? `Guest` : username;
