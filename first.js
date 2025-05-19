@@ -1,12 +1,12 @@
 
-//.lastElementChild
+//.previousElementSibling
+const element = document.getElementById("apple");
+const previousSibling = element.previousElementSibling;
+previousSibling.style.color = "red";    
 
-const element = document.getElementById("fruits");
-const lastChild = element.lastElementChild;
-lastChild.style.backgroundColor = "yellow";
 
 const ulElements = document.querySelectorAll("ul");
-ulElements.forEach((ul) => {
-    const lastChild = ul.lastElementChild;
-    lastChild.style.backgroundColor = "yellow";
+ulElements.forEach((ul) =>{
+    const previousSibling = ul.previousElementSibling;
+    previousSibling.style.backgroundColor = "red";  
 });
