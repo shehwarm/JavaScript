@@ -49,3 +49,7 @@ const foods = document.querySelectorAll("li");
 foods[0].style.backgroundColor = "lightblue";
 foods[1].style.backgroundColor = "lightgreen";
 foods[2].style.backgroundColor = "lightyellow";
+
+foods.forEach(food => {
+    food.style.backgroundColor = "lightpink";
+});
