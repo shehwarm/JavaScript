@@ -1,4 +1,6 @@
-#mySubmit{
-    font-size : 1em;
-
+.box{
+    border : 3px solid #000;
+    width : 100px;
+    height : 125px;
+    
 }
