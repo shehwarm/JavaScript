@@ -1,13 +1,2 @@
-const myButton = document.getElementById("myButton");
-const myImg = document.getElementById("myImg");
+let buttons = document.querySelectorAll(".myButtons");
 
-myButton.addEventListener("click", event => {
-    if(myImg.style.display === "none"){
-        myImg.style.display = "block";
-        muButton.textContent = "hide";
-    }
-   else{
-    myImg.style.display = "none";
-    myButton.textContent = "show";
-}
-});
