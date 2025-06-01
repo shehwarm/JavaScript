@@ -1,13 +1,54 @@
-function Car(make, model){
-    this.make = make;
-    this.model = model;
+function walk(){
+   return new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+         const dogWalked="true";
+
+            if(dogWalked){
+               resolve("You walked the dog");
+            }
+            else{
+                reject("you didnt");
+            }
+        
+    }, 1000);
+})
 }
 
-const car1 = new Car("Ford", "Mustang");
-const car2 = new Car("Chevrolet", "Camaro");
+function cleanKitchen(){
+   
+    return new Promise((resolve, reject) =>{
+        setTimeout(()=>{
+          const cleaned="true";
 
-console.log(car1.make);
-console.log(car1.model);
+            if(cleaned){
+               resolve("You cleaned the kitchen");
+            }
+            else{
+                reject("you didnt clean it");
+            }
+        
+    }, 2500);
+    })
+}
 
-console.log(car2.make);
-console.log(car2.model);
+function trash(){
+    return new Promise((resolve, reject) =>{
+        setTimeout(()=>{
+            
+            const trashOut=false;
+
+            if(trashOut){
+               resolve("You take out the trash.");
+            }
+            else{
+                reject("you didnt");
+            }
+        
+    }, 500);
+})
+}
+
+walk().then(value => {console.log(value); return cleanKitchen()})
+      .then(value => {console.log(value); return trash()})
+      .then(value => {console.log(value); console.log("finished")})
+      .catch(error => {console.error("An error occurred:", error)});
