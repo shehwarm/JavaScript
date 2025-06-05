@@ -1,7 +1,12 @@
-const min = 50; 
-const max = 100;
-const range = max - min ;
+const btn = document.getElementById('btn');
+const myLabel = document.getElementById('myLabel');
 
-let randomNum = Math.floor(Math.random() * range) + min;
+const min = 1;
+const max = 6;
 
-console.log(randomNum);
+let randomNumber;
+
+btn.onclick = function(){
+    randomNumber = Math.floor(Math.random() * max) + min;
+    myLabel.textContent = randomNumber;
+}
