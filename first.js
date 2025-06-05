@@ -1,4 +1,7 @@
- fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
-      .then(response => response.json())
-      .then(data => console.log(data.name))
-      .catch(error => console.error(error));
+const min = 50; 
+const max = 100;
+const range = max - min ;
+
+let randomNum = Math.floor(Math.random() * range) + min;
+
+console.log(randomNum);
